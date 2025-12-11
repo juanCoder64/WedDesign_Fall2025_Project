@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/juanCoder64/WedDesign_Fall2025_Project.git"
+    "url": "git+https://github.com/Adrews04/WedDesign_Fall2025_Project.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/juanCoder64/WedDesign_Fall2025_Project/issues"
+    "url": "https://github.com/Adrews04/WedDesign_Fall2025_Project/issues"
   },
-  "homepage": "https://github.com/juanCoder64/WedDesign_Fall2025_Project#readme",
+  "homepage": "https://github.com/Adrews04/WedDesign_Fall2025_Project",
   "dependencies": {
     "typescript": "^5.9.3"
   }
