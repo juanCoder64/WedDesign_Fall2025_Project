@@ -1,0 +1,27 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./src",
+    "outDir": "./scripts",
+
+    // Environment Settings - changed for browser compatibility
+    "module": "none",
+    "target": "es2017",
+    "lib": ["es2017", "dom"],
+    "types": [],
+
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    "strict": true,
+    "skipLibCheck": true,
+
+    // Browser-specific options
+    "moduleResolution": "node"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "weddesign_fall2025_project",
+  "version": "1.0.0",
+  "description": "Basic web page to help new programmers learn the basics of Typescript",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanCoder64/WedDesign_Fall2025_Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanCoder64/WedDesign_Fall2025_Project/issues"
+  },
+  "homepage": "https://github.com/juanCoder64/WedDesign_Fall2025_Project#readme",
+  "dependencies": {
+    "typescript": "^5.9.3"
+  }
+}
