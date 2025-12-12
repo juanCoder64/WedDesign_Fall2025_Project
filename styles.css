@@ -90,6 +90,9 @@ th {
     width: 100%;
     text-align: center;
 }
+code{
+    text-align: left;
+}
 .example button{
     margin: 5px;
     background-color: #ffffff;
@@ -99,7 +102,7 @@ th {
     cursor: pointer;
     border: none;
 }
-.example textarea{
+.codeBlock{
     margin-top: 10px;
     width: 100%;
     overflow-x: auto;
@@ -153,5 +156,4 @@ aside {
         max-width: 100%;
         width: 100%;
     }
-
 }

@@ -1,23 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="UTF-8">
     <title>Typescript handbook</title>
     <link rel="stylesheet" href="../../styles.css">
     <link rel="icon" href="../../assets/icons/Typescript.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </head>
 
 <body>
-    <div class="header">
-        <a href="../../index.html" class="back-button">← Back to Home</a>
-        <div class="header-title">
-            <h1>Typescript programmer's handbook</h1>
-            <h2>Generic Types</h2>
-        </div>
+<div class="header">
+    <a href="../../index.html" class="back-button">← Back to Home</a>
+    <div class="header-title">
+        <h1>Typescript programmer's handbook</h1>
+        <h2>Generic Types</h2>
     </div>
-    <div class="content">
-    </div>
+</div>
+<div class="layout">
+    <main class="main-content">
+        <p>Generics provide a way to create reusable components that can work with a variety of types rather than a single one.
+            They allow you to define a function, class, or interface with a placeholder for the type, which can be specified when
+            the component is used.</p>
+
+        <h1>Generic Functions</h1>
+        <p>Here's an example of a generic function that takes an array of items and returns the first item:</p>
+        <pre><code>function getFirstItem&lt;T&gt;(items: T[]): T {
+    return items[0];
+}
+const numbers = [1, 2, 3];
+const firstNumber = getFirstItem(numbers); // firstNumber is of type number
+const strings = ["a", "b", "c"];
+const firstString = getFirstItem(strings); // firstString is of type string</code></pre>
+        <h1>Generic Classes</h1>
+        <p>You can also create generic classes. Here's an example of a generic class that implements a simple stack data structure:</p>
+        <pre><code>class Stack&lt;T&gt; {
+    private items: T[] = [];
+    push(item: T): void {
+        this.items.push(item);
+    }
+    pop(): T | undefined {
+        return this.items.pop();
+    }
+}
+const numberStack = new Stack&lt;number&gt;();
+numberStack.push(1);
+numberStack.push(2);
+const poppedNumber = numberStack.pop(); // poppedNumber is of type number
+const stringStack = new Stack&lt;string&gt;();
+stringStack.push("a");
+stringStack.push("b");
+const poppedString = stringStack.pop(); // poppedString is of type string</code></pre>
+        <h1>Generic Interfaces</h1>
+        <p>Generics can also be used with interfaces. Here's an example of a generic interface for a key-value pair:</p>
+        <pre><code>interface KeyValuePair&lt;K, V&gt; {
+    key: K;
+    value: V;
+}
+const pair: KeyValuePair&lt;string, number&gt; = {
+    key: "age",
+    value: 30
+};</code></pre>
+        <p>In this example, the <code>KeyValuePair</code> interface uses two type parameters, <code>K</code> and <code>V</code>, to
+            represent the types of the key and value, respectively.</p>
+    </main>
+    <aside class="example">
+        <h2 >Example: Generic Function</h2>
+        <p>Select an array and see how the generic function <code>getFirstItem</code> works with different types.</p>
+        <pre><code>function getFirstItem&lt;T&gt;(items: T[]): T {
+    return items[0];
+}
+const numbers = [10, 20, 30];
+const strings = ["apple", "banana", "cherry"];
+const booleans = [true, false, true];</code></pre>
+        <label for="typeSelect">Choose array:</label>
+        <select id="typeSelect">
+            <option value="numbers">getFirstItem(numbers)</option>
+            <option value="strings">getFirstItem(strings)</option>
+            <option value="booleans">getFirstItem(booleans)</option>
+        </select>
+        <button id="runExample">Run Example</button>
+        <pre><code id="exampleOutput">Output will appear here</code></pre>
+        <script src="../../scripts/generic_types.js"></script>
+    </aside>
+</div>
 </body>
 
 </html>
