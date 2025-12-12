@@ -30,6 +30,22 @@ body{
 
 .content{
     padding: 20px;
+    ol{
+        margin-left: 20px;
+        li{
+            margin-bottom: 10px;
+        }
+    }
+    code{
+        background-color: #eaeaea;
+        padding: 2px 4px;
+        border-radius: 4px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    a{
+        color: #00a6ff;
+        text-decoration: none;
+    }
 }
 
 .table-header{
@@ -64,4 +80,78 @@ th {
 
 .back-button:hover {
     color: #000000;
+}
+.example{
+    background-color: #42a3dc;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+}
+.example button{
+    margin: 5px;
+    background-color: #ffffff;
+    color: #42a3dc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+.example textarea{
+    margin-top: 10px;
+    width: 100%;
+    overflow-x: auto;
+    white-space: pre;
+    overflow-wrap: normal;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 14px;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+aside {
+    background: #f7f7f7;
+    padding: 1rem;
+    border-radius: 8px;
+
+    flex: 0 0 300px;
+    max-width: 35%;
+    align-self: flex-start;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.main-content {
+    padding: 20px;
+    flex: 1 1 0;
+}
+
+@media (max-width: 800px) {
+    .layout {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px;
+    }
+    .main-content {
+        width: 100%;
+    }
+    aside {
+        flex: none;
+        max-width: 100%;
+        width: 100%;
+    }
+
 }

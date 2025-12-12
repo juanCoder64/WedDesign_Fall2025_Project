@@ -9,15 +9,74 @@
 </head>
 
 <body>
-    <div class="header">
-        <a href="../../index.html" class="back-button">← Back to Home</a>
-        <div class="header-title">
-            <h1>Typescript programmer's handbook</h1>
-            <h2>Getting Started</h2>
-        </div>
+<div class="header">
+    <a href="../../index.html" class="back-button">← Back to Home</a>
+    <div class="header-title">
+        <h1>Typescript programmer's handbook</h1>
+        <h2>Getting Started</h2>
     </div>
-    <div class="content">
-    </div>
+</div>
+<div class="layout">
+
+
+    <main class="main-content">
+        <p>TypeScript is a superset of the JavaScript language that focuses on producing safe and predictable code that
+            can be executed by any JavaScript runtime. Its headline feature is static typing, which makes working with
+            JavaScript more predictable for programmers familiar with languages such as C# and Java.</p>
+
+        <h1>Setting up a TypeScript Development Environment</h1>
+        <p>To start using TypeScript, you'll need to set up a development environment. Here are the steps to get you started:</p>
+        <ol>
+            <li><strong>Install Node.js and npm:</strong> TypeScript requires Node.js and npm (Node Package Manager). You can download and install them from the official <a href="https://nodejs.org/">Node.js website</a>.</li>
+            <li><strong>Install TypeScript:</strong> Once you have Node.js and npm installed, you can install TypeScript globally using npm. Open your terminal or command prompt and run the following command:
+                <pre><code>npm install -g typescript</code></pre>
+            </li>
+            <li><strong>Verify the installation:</strong> After the installation is complete, you can verify that TypeScript is installed correctly by checking its version. Run the following command:
+                <pre><code>tsc --version</code></pre>
+            </li>
+            <li><strong>Set up a TypeScript project:</strong> Create a new directory for your TypeScript project and navigate into it:
+                <pre><code>mkdir my-typescript-project
+cd my-typescript-project</code></pre>
+                Then, initialize a new npm project:
+                <pre><code>npm init -y</code></pre>
+            </li>
+            <li><strong>Create a TypeScript configuration file:</strong> You can create a <code>tsconfig.json</code> file to configure the TypeScript compiler options. Run the following command:
+                <pre><code>tsc --init</code></pre>
+            </li>
+            <li><strong>Create your first TypeScript file:</strong> Create a new file with a <code>.ts</code> extension, for example, <code>index.ts</code>, and add some TypeScript code to it:
+                <pre><code>function greet(name: string): string {
+    return "Hello, " + name + "!";
+}
+console.log(greet("World"));</code></pre>
+            </li>
+            <li><strong>Compile TypeScript to JavaScript:</strong> To compile your TypeScript code to JavaScript, run the following command:
+                <pre><code>tsc</code></pre>
+                This will generate a corresponding <code>index.js</code> file in the same directory.
+            </li>
+            <li><strong>Run the JavaScript code:</strong> You can run the compiled JavaScript code using Node.js:
+                <pre><code>node index.js</code></pre>
+            </li>
+        </ol>
+        <p>Congratulations! You have successfully set up a TypeScript development environment and compiled your first TypeScript program. You can now start exploring more advanced features of TypeScript and building your applications.</p>
+    </main>
+
+    <aside class="example">
+        <h3>Example of TypeScript code compilation</h3>
+        <label for="codeInput">Source TypeScript code:</label><textarea id="codeInput" class='codeBlock'>
+function greet(name: string): string {
+    return "Hello, " + name + "!";
+}
+console.log(greet("World"));
+        </textarea>
+        <br>
+        <button id="runBtn">Compile</button>
+        <br>
+        <label for="codeOutput">Compiled Javascript code:</label><textarea id="codeOutput" readonly class="codeBlock">
+        </textarea>
+        <script src="https://cdn.jsdelivr.net/npm/typescript@5.9.3/lib/typescript.min.js"></script>
+        <script src="../../scripts/getting_started.js"></script>
+    </aside>
+</div>
 </body>
 
 </html>
